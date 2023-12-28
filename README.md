@@ -2,13 +2,14 @@
 A Zephyr-based bootloader for the Steam Deck and Steam Deck OLED with network-boot-over-wifi and hypervisor functionality.
 
 # Set up the build environment.
-##Requirements:
+## Requirements:
 * A Linux-based OS
     * The following may work on macOS, but I cannot test that at this time. If you would like to try it and report back, please do. Just remember to download the macOS version of the Zephyr SDK instead of the Linux version.
+* Git
 * Python3
 * Pip3
 
-##Instructions
+## Instructions
 1. Install "venv":
     ```
    pip3 install venv
@@ -16,7 +17,7 @@ A Zephyr-based bootloader for the Steam Deck and Steam Deck OLED with network-bo
 2. run
    ```
    mkdir ~/steamdeckhacks
-   python3 -m venv ~/steamdeckhacks
+   python3 -m venv ~/steamdeckhacks/.venv
    cd ~/steamdeckhacks
    source .venv/bin/activate
    ```
@@ -29,7 +30,11 @@ A Zephyr-based bootloader for the Steam Deck and Steam Deck OLED with network-bo
    west init -m https://github.com/skymage23/kernelmechanic.git
    west update
    ```
-5. Your cloning of the repository is complete, but you must still install and set up the Zephyr SDK.
+   If you want to contribute to the project, use ```git+ssh://git@github.com/skymage23/kernelmechanic.git``` instead when running ```west init```.  You could use HTTPS for this, but I find using SSH to be simpler.
+   * You will need a GitHub account to do this.
+   * You will also need to have set up an SSH public key for your GitHub account.
+   
+6. Your cloning of the repository is complete, but you must still install and set up the Zephyr SDK.
    ```
    wget https://github.com/zephyrproject-rtos/sdk-ng/releases/download/v0.16.4/zephyr-sdk-0.16.4_linux-x86_64.tar.xz
    tar -xvf zephyr-sdk-0.16.4_linux-x86_64.tar.xz
