@@ -1,0 +1,12 @@
+BOARD_NAME="qemu_x86_64"
+BOARD_DESC="Virtual board for development."
+
+board_init(){
+    export BOARD="qemu_x86_64"
+    export OVMF_FD_PATH="/usr/share/OVMF/OVMF_CODE-pure-efi.fd"
+}
+
+board_deinit(){
+    unset BOARD
+    unset OVMF_FD_PATH
+}

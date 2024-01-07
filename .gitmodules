@@ -1,3 +1,6 @@
 [submodule "third_party/linux-stable"]
 	path = third_party/linux-stable
 	url = https://git.kernel.org/pub/scm/linux/kernel/git/stable/linux.git
+[submodule "third_party/scripts/python/modules/sharedlib"]
+	path = third_party/scripts/python/modules/sharedlib
+	url = https://github.com/skymage23/sharedlib.git

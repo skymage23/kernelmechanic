@@ -1,0 +1,9 @@
+BOARD_NAME="jupiter"
+BOARD_DESC="Jupiter.  Valve's motherboard for the Steam Deck."
+board_init(){
+   echo "Initializing build environment for the Jupiter board."
+}
+
+board_deinit(){
+   echo "Deinitializing build environment for the Jupiter board"
+}
